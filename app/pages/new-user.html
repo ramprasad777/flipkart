@@ -1,0 +1,19 @@
+<div class="col-md-12">
+  <p><strong>New to flipkart</strong></p>
+  <form ng-submit="newRegistration()" class="form">
+    <div class="col-md-4">
+      <div class="form-group">
+        <input type="text" class="form-control" ng-model="mobNum" placeholder="Mobile Number" required=""/>
+      </div>
+
+      <div class="form-group">
+        <button type="submit" class="btn btn-success">Validate</button>
+        <span class="text-danger" style="color:red">{{ error }}</span>
+      </div>
+    </div>
+  </form>
+</div>
+
+  <div class="" ng-controller="LoginController">
+    <a href="#" ui-sref="login">Existing User? Login</a>
+  </div>
