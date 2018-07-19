@@ -24,7 +24,7 @@
         controller : 'HomeController'
       })
       .state('register', {
-        url : '/register',
+        url : '/registeration',
         templateUrl: '../../pages/new-user.html',
         controller: 'registrationController'
       });

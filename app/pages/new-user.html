@@ -1,13 +1,15 @@
-<div class="col-md-12">
+<div class="col-md-12" class="newRegistrationForm" ng-controller="registrationController">
   <p><strong>New to flipkart</strong></p>
-  <form ng-submit="newRegistration()" class="form">
+  <form ng-submit="newRegistration()" name="newRegistrationForm" class="form">
     <div class="col-md-4">
       <div class="form-group">
-        <input type="text" class="form-control" ng-model="mobNum" placeholder="Mobile Number" required=""/>
+        <input type="number" name="mobNumber" class="form-control" ng-model="mobNumber" placeholder="Mobile Number" required=""/>
       </div>
-
       <div class="form-group">
-        <button type="submit" class="btn btn-success">Validate</button>
+        <input type="number" class="form-control" ng-disabled="mobNumber" ng-model="passCode" placeholder="Enter Code" required=""/>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-success" ng-disabled="newRegistrationForm.$invalid">Validate</button>
         <span class="text-danger" style="color:red">{{ error }}</span>
       </div>
     </div>

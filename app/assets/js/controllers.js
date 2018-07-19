@@ -20,14 +20,14 @@ app.controller('LoginController', function($scope, $rootScope, $stateParams, $st
 //new user registration controller
 app.controller('registrationController', function($scope, $rootScope, $stateParams, $state, RegistationService){
   $scope.newRegistration = function(){
-    if(RegistationService.register($scope.mobNum)) {
-      $rootScope.mobNum = $scope.mobNum;
+    if(RegistationService.login($scope.mobNumber, $scope.passCode)) {
+      $rootScope.mobNumber = $scope.mobNumber;
       $scope.error = '';
-      $scope.username = '';
-      $scope.password = '';
+      $scope.mobNumber = '';
+      $scope.passCode = '';
       $state.transitionTo('home');
     } else {
-      $scope.error = "Incorrect username/password !";
+      $scope.error = "Please Enter a Valid Number!";
     }  
   };
 });
